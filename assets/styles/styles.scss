@@ -1,0 +1,245 @@
+$primColor : #ec5242;
+
+@font-face {
+    font-family: cocogoose;
+    src: url(/assets/styles/fonts/cocogoose.ttf);
+    /* dafont.com */
+}
+
+@font-face {
+    font-family: lato;
+    src: url(/assets/styles/fonts/Lato.ttf);
+    /* Google fonts */
+}
+
+.main {
+    background-color: lightgreen;
+    font-family: lato, sans-serif;
+}
+
+.header-sm {
+    background-color: none;
+}
+
+.header {
+    background-color: lightpink;
+}
+
+.top-nav {
+    background-color: lightskyblue;
+}
+
+.bot-nav {
+    background-color: lightyellow
+}
+
+.position-rel {
+    position: relative;
+}
+
+.border-head::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    bottom: -17px;
+    border-bottom: 2px solid $primColor;
+}
+
+.border-3 {
+    border-width: 3px !important;
+}
+
+.font-coco {
+    font-family: cocogoose;
+}
+
+.prim-color {
+    color: #ec5242;
+}
+
+.prim-bg {
+    background-color: #ec5242;
+}
+
+.text-bg {
+    background: linear-gradient(#e9301bc6, #e22d18a8), url(/assets/imgs/main/bg-text.jpg) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: top;
+    background-size: cover;
+
+}
+
+.border-color {
+    border-color: lightgray;
+}
+/* Mobile Nav Menu
+ * Made by Erik Terwan (MIT)
+ * With my Modifications */
+
+.menuToggle {
+
+    display: block;
+    z-index: 1;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+
+    span {
+        display: block;
+        width: 39px;
+        height: 6px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #232323; //Burger Color
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    input:checked~ul {
+        transform: none;
+    }
+
+    .menu {
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+        li {
+            padding: 10px 0;
+            font-size: 22px;
+
+            a {
+                text-decoration: none;
+                color: #232323;
+                transition: color 0.3s ease;
+            }
+
+            :hover {
+                color: tomato;
+            }
+        }
+    }
+
+}
+
+/* Mobile Nav Menu End */
+
+.jumbotron {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/assets/imgs/main/bg-main.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50%;
+
+}
+
+.our-prog,
+.our-tech {
+    /* flex contanier */
+    background-image: url('/assets/imgs/metal-pattern.png');
+    background-repeat: repeat;
+    background-size: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.061);
+    }
+
+    .card-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        i {
+            font-size: 350%;
+        }
+
+        .card-title {
+            text-align: left;
+        }
+
+        .card-text {
+            font-size: 80%;
+            text-align: left;
+
+            .head-line::after {
+                content: "";
+                position: absolute;
+                width: 30px;
+                bottom: -10px;
+                border-bottom: 2px solid lightgray;
+            }
+        }
+
+    }
+
+}
+
+.our-tech {
+    background-image: none;
+    background-color: #f8f8f8;
+}
+
+.partners {
+    background-color: saddlebrown;
+}
+
+.footer {
+    background-color: maroon;
+}

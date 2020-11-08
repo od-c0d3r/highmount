@@ -1,0 +1,274 @@
+@font-face {
+  font-family: cocogoose;
+  src: url(/assets/styles/fonts/cocogoose.ttf);
+  /* dafont.com */
+}
+
+@font-face {
+  font-family: lato;
+  src: url(/assets/styles/fonts/Lato.ttf);
+  /* Google fonts */
+}
+
+.main {
+  background-color: lightgreen;
+  font-family: lato, sans-serif;
+}
+
+.header-sm {
+  background-color: none;
+}
+
+.header {
+  background-color: lightpink;
+}
+
+.top-nav {
+  background-color: lightskyblue;
+}
+
+.bot-nav {
+  background-color: lightyellow;
+}
+
+.position-rel {
+  position: relative;
+}
+
+.border-head::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  bottom: -17px;
+  border-bottom: 2px solid #ec5242;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.font-coco {
+  font-family: cocogoose;
+}
+
+.prim-color {
+  color: #ec5242;
+}
+
+.prim-bg {
+  background-color: #ec5242;
+}
+
+.text-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(/assets/imgs/main/bg-text.jpg) no-repeat;
+  background: linear-gradient(#e9301bc6, #e22d18a8), url(/assets/imgs/main/bg-text.jpg) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: top;
+  background-size: cover;
+}
+
+.border-color {
+  border-color: lightgray;
+}
+
+/* Mobile Nav Menu
+ * Made by Erik Terwan (MIT)
+ * With my Modifications */
+.menuToggle {
+  display: block;
+  z-index: 1;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.menuToggle span {
+  display: block;
+  width: 39px;
+  height: 6px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #232323;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.menuToggle .menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.menuToggle .menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.menuToggle .menu li a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.menuToggle .menu li :hover {
+  color: tomato;
+}
+
+/* Mobile Nav Menu End */
+.jumbotron {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/assets/imgs/main/bg-main.png");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/assets/imgs/main/bg-main.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50%;
+}
+
+.our-prog,
+.our-tech {
+  /* flex contanier */
+  background-image: url("/assets/imgs/metal-pattern.png");
+  background-repeat: repeat;
+  background-size: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.our-prog .card,
+.our-tech .card {
+  background-color: rgba(255, 255, 255, 0.061);
+}
+
+.our-prog .card-body,
+.our-tech .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.our-prog .card-body i,
+.our-tech .card-body i {
+  font-size: 350%;
+}
+
+.our-prog .card-body .card-title,
+.our-tech .card-body .card-title {
+  text-align: left;
+}
+
+.our-prog .card-body .card-text,
+.our-tech .card-body .card-text {
+  font-size: 80%;
+  text-align: left;
+}
+
+.our-prog .card-body .card-text .head-line::after,
+.our-tech .card-body .card-text .head-line::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  bottom: -10px;
+  border-bottom: 2px solid lightgray;
+}
+
+.our-tech {
+  background-image: none;
+  background-color: #f8f8f8;
+}
+
+.partners {
+  background-color: saddlebrown;
+}
+
+.footer {
+  background-color: maroon;
+}
+/*# sourceMappingURL=styles.css.map */
