@@ -13,24 +13,18 @@ $primColor : #ec5242;
 }
 
 .main {
-    background-color: lightgreen;
     font-family: lato, sans-serif;
 }
 
-.header-sm {
-    background-color: none;
-}
-
-.header {
-    background-color: lightpink;
-}
-
 .top-nav {
-    background-color: lightskyblue;
+    background-color: #3e3e3e;
 }
 
 .bot-nav {
-    background-color: lightyellow
+
+    .bot-nav-img {
+        max-height: 80px;
+    }
 }
 
 .position-rel {
@@ -74,10 +68,9 @@ $primColor : #ec5242;
 .border-color {
     border-color: lightgray;
 }
-/* Mobile Nav Menu
- * Made by Erik Terwan (MIT)
- * With my Modifications */
 
+/* Mobile Nav Menu * Made by Erik Terwan (MIT)
+* With my Modifications */
 .menuToggle {
 
     display: block;
@@ -91,8 +84,8 @@ $primColor : #ec5242;
         width: 40px;
         height: 32px;
         position: absolute;
-        top: -7px;
-        left: -5px;
+        top: -2px;
+        left: 15px;
         cursor: pointer;
         opacity: 0;
         z-index: 2;
@@ -175,18 +168,15 @@ $primColor : #ec5242;
 /* Mobile Nav Menu End */
 
 .jumbotron {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png");
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50%;
-
+    height: 700px;
 }
 
 .our-prog,
 .our-tech {
     /* flex contanier */
-    background-image: url('/assets/imgs/metal-pattern.png');
+    background-image: url('../imgs/metal-pattern.png');
     background-repeat: repeat;
     background-size: auto;
 
@@ -196,39 +186,40 @@ $primColor : #ec5242;
     align-items: center;
     gap: 15px;
 
-    .card {
-        background-color: rgba(255, 255, 255, 0.061);
-    }
+    .cards {
+        .card {
+            background-color: rgba(255, 255, 255, 0.061);
 
-    .card-body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
+            .card-body {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
 
-        i {
-            font-size: 350%;
-        }
+                i {
+                    font-size: 350%;
+                }
 
-        .card-title {
-            text-align: left;
-        }
+                .card-title {
+                    text-align: left;
+                }
 
-        .card-text {
-            font-size: 80%;
-            text-align: left;
+                .card-text {
+                    font-size: 80%;
+                    text-align: left;
 
-            .head-line::after {
-                content: "";
-                position: absolute;
-                width: 30px;
-                bottom: -10px;
-                border-bottom: 2px solid lightgray;
+                    .head-line::after {
+                        content: "";
+                        position: absolute;
+                        width: 30px;
+                        bottom: -10px;
+                        border-bottom: 2px solid lightgray;
+                    }
+                }
             }
         }
-
     }
-
 }
 
 .our-tech {
@@ -237,9 +228,62 @@ $primColor : #ec5242;
 }
 
 .partners {
-    background-color: saddlebrown;
+    background-color: #414246;
+
 }
 
 .footer {
-    background-color: maroon;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .our-prog {
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            .card {
+                height: 300px;
+                width: 250px;
+
+                .card-body {
+                    flex-direction: column;
+                    align-content: flex-start;
+                    gap: 20px;
+
+                    .card-title {
+                        text-align: center;
+                    }
+
+                    .card-text {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .our-tech {
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .our-tech {
+        .cards {
+            .card {
+                width: 50%;
+            }
+        }
+    }
 }

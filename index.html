@@ -18,9 +18,50 @@
 
     <main class="container-fluid main">
 
-        <section class="row jumbotron mb-0">
-            <header>
-                <nav class="col-12 d-md-none nav-sm" role="navigation">
+        <nav class="row d-none d-md-block">
+
+            <nav class="col-12 top-nav py-2 text-right">
+
+                <aside class="container p-0">
+                    <ul class="list-unstyled m-0">
+                        <li class="list-inline-item pr-2">
+                            <i class="text-white fab fa-facebook-f"></i>
+                        </li>
+                        <li class="list-inline-item pr-3">
+                            <i class="text-white fab fa-twitter"></i>
+                        </li>
+                        <li class="list-inline-item pr-3">
+                            <a class="text-white" href="#">English</a>
+                        </li>
+                        <li class="list-inline-item pr-3">
+                            <a class="text-white" href="#">Login</a>
+                        </li>
+                    </ul>
+                </aside>
+
+            </nav>
+
+            <nav class="bot-nav">
+
+                <article class="container d-flex justify-content-between align-items-center py-1 pt-3">
+
+                    <img class="bot-nav-img" src="assets/imgs/hm-logo.svg" alt="High Mountain logo">
+    
+                    <ul class="list-unstyled">
+                        <li class="list-inline-item"><a class="px-4 text-secondary" href="#">About</a></li>
+                        <li class="list-inline-item"><a class="px-4 text-secondary" href="#">Program</a></li>
+                        <li class="list-inline-item"><a class="px-4 text-secondary" href="#">Partners</a></li>
+                        <li class="list-inline-item"><a class="px-4 text-secondary" href="#">News</a></li>
+                        <li class="list-inline-item"><a class="px-5 ml-4 btn btn-outline-danger border-3" href="#">Join</a></li>
+                    </ul>
+                </article>
+                
+            </nav>
+        </nav>
+
+        <header class="row jumbotron mb-0">
+            <header class="col-12 header p-0">
+                <nav class="col-12 d-md-none" role="navigation">
                     <div class="menuToggle">
                         <input type="checkbox" />
                         <span></span>
@@ -28,122 +69,248 @@
                         <span></span>
 
                         <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Info</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Show me more</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="booking.html">Booking</a></li>
                             </a>
                         </ul>
                     </div>
                 </nav>
-                <nav class="col-12 d-none d-md-block top-nav">.top-nav</nav>
-                <nav class="col-12 d-none d-md-block bot-nav">.bot-nav</nav>
             </header>
 
-            <article>
-
+            <article class="container">
                 <h3 class="pt-5 pb-3 m-0 prim-color">"What Future Developers do now?"</h1>
                     <h1 class="font-coco display-2 font-weight-bold m-0 text-bg">Change Things</h1>
-                    <p class="bg-light border-3 border border-white p-3 mt-3 bg">At High Mountain School you learn how
+                    <p class="col-md-9 bg-light border-3 border border-white p-3 mt-3">At High Mountain School you learn
+                        how
                         the future is being built, so you can change anything, starting with a new career in code, data
                         science, or cybersecurity.</p>
 
-                    <p class="m-0 prim-color">Book a seat in "Developers Roadmaps" Session</p>
-                    <p class="font-weight-bold m-0 mb-4 prim-color">2020.10.15(THU) ~ 10:00 UTC</p>
+                    <p class="m-0 prim-color lead">Book a seat in "Developers Roadmaps" Session</p>
+                    <p class="font-weight-bold m-0 mb-4 prim-color lead">2020.10.15(THU) ~ 10:00 UTC</p>
 
-                    <p class="lead d-flex justify-content-center">
-                        <a class="btn btn-outline-light text-body btn-lg btn-block border-3" href="#"
-                            role="button">GET A SEAT</a>
+                    <p class="lead d-flex justify-content-center d-md-none">
+                        <a class="btn btn-outline-light text-body btn-lg btn-block border-3" href="#" role="button">GET
+                            A SEAT</a>
+                    </p>
+
+                    <p class="lead d-none d-md-block my-5">
+                        <a class="btn btn-outline-light text-body btn-lg border-3" href="#" role="button">GET A SEAT</a>
                     </p>
 
             </article>
-        </section>
+
+        </header>
 
         <section class="row our-prog py-5 px-3 text-white">
 
-            <h4 class="position-rel d-flex justify-content-center border-head mb-4">School Program</h4>
+            <h4 class="position-rel d-flex justify-content-center border-head mb-4">School Programs</h4>
 
-            <article class="card">
-                <aside class="card-body text-center">
-                    <i class="fab fa-uncharted"></i>
-                    <h5 class="card-title prim-color">Software Engineering</h5>
-                    <p class="card-text">Launch your career as a full-stack web developer with our proven curriculum and
-                        passionate instructors.</p>
+            <article class="container cards">
+                <aside class="card mb-2">
+                    <aside class="card-body text-center">
+                        <i class="fab fa-uncharted"></i>
+                        <h5 class="card-title prim-color">Software Engineering</h5>
+                        <p class="card-text">Launch your career as a full-stack web developer with our proven curriculum
+                            and
+                            passionate instructors.</p>
+                    </aside>
                 </aside>
+
+                <aside class="card mb-2">
+                    <aside class="card-body text-center">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h5 class="card-title prim-color">Data Science</h5>
+                        <p class="card-text">Our full-time data science program that gives students the breadth and
+                            depth
+                            needed to become well-rounded data scientists.</p>
+                    </aside>
+                </aside>
+
+                <aside class="card">
+                    <aside class="card-body text-center">
+                        <i class="fas fa-shield-alt"></i>
+                        <h5 class="card-title prim-color">Cybersecurity Engineering</h5>
+                        <p class="card-text">Fast-track to the skills you need for a new cybersecurity career with our
+                            15-week program.</p>
+                    </aside>
+                </aside>
+
             </article>
 
-            <article class="card">
-                <aside class="card-body text-center">
-                    <i class="fas fa-user-astronaut"></i>
-                    <h5 class="card-title prim-color">Data Science</h5>
-                    <p class="card-text">Our full-time data science program that gives students the breadth and depth
-                        needed to become well-rounded data scientists.</p>
-                </aside>
-            </article>
-
-            <article class="card">
-                <aside class="card-body text-center">
-                    <i class="fas fa-shield-alt"></i>
-                    <h5 class="card-title prim-color">Cybersecurity Engineering</h5>
-                    <p class="card-text">Fast-track to the skills you need for a new cybersecurity career with our
-                        15-week program.</p>
-                </aside>
-            </article>
-
-            <button type="button" class="btn btn-lg prim-bg text-white py-4 px-5 my-4">Join High Mountain Januray
+            <!-- program btn for sm -->
+            <button type="button" class="d-md-none btn btn-lg prim-bg text-white py-4 px-5 my-4">Join High Mountain
+                Januray
                 Class</button>
 
+            <!-- program btn for md -->
+            <button type="button" class="d-none d-md-block btn btn-link text-white-50 py-4 px-5 my-4">SEE THE WHOLE
+                LIST</button>
+
         </section>
 
-        <section class="row our-tech py-4 px-3"> <!-- UPDATE CONTENT -->
+        <section class="row our-tech py-4 px-3">
+            <!-- UPDATE CONTENT -->
             <h4 class="position-rel d-flex justify-content-center border-head mb-4">School Teachers</h4>
 
-            <article class="card border-0">
-                <aside class="card-body text-center">
-                    <img src="assets/imgs/main/teacher-1.png" alt="teacher-1">
-                    <aside class="card-text">
+            <aside class="container cards">
 
-                        <aside class="position-rel head-line">
-                            <h3>Yochai benkler</h3>
-                            <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                <article class="card border-0">
+                    <aside class="card-body text-center">
+                        <img src="assets/imgs/main/teacher-1.png" alt="teacher-1">
+                        <aside class="card-text">
+
+                            <aside class="position-rel head-line">
+                                <h3>Yochai benkler</h3>
+                                <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                            </aside>
+
+                            <p>Launch your career as a full-stack web developer with our proven curriculum
+                                and
+                                passionate instructors.</p>
+
                         </aside>
 
-                        <p>Launch your career as a full-stack web developer with our proven curriculum
-                            and
-                            passionate instructors.</p>
-
                     </aside>
+                </article>
 
-                </aside>
-            </article>
-
-            <article class="card border-0">
-                <aside class="card-body text-center">
-                    <img src="assets/imgs/main/teacher-2.png" alt="teacher-2">
-                    <aside class="card-text">
-                        <aside class="position-rel head-line">
-                            <h3>SohYeong Noh</h3>
-                            <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                <article class="card border-0">
+                    <aside class="card-body text-center">
+                        <img src="assets/imgs/main/teacher-2.png" alt="teacher-2">
+                        <aside class="card-text">
+                            <aside class="position-rel head-line">
+                                <h3>SohYeong Noh</h3>
+                                <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                            </aside>
+                            <p>Launch your career as a full-stack web developer with our proven curriculum
+                                and
+                                passionate instructors.</p>
                         </aside>
-                        <p>Launch your career as a full-stack web developer with our proven curriculum
-                            and
-                            passionate instructors.</p>
+
                     </aside>
+                </article>
 
-                </aside>
-            </article>
+                <article class="d-none d-md-block card border-0">
+                    <aside class="card-body text-center">
+                        <img src="assets/imgs/main/teacher-3.png" alt="teacher-3">
+                        <aside class="card-text">
 
-            <button type="button" class="btn btn-light text-body btn-block btn-lg border-3 border-color py-3">MORE <span class="prim-color">⯆</span></button>
+                            <aside class="position-rel head-line">
+                                <h3>Yochai benkler</h3>
+                                <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                            </aside>
 
+                            <p>Launch your career as a full-stack web developer with our proven curriculum
+                                and
+                                passionate instructors.</p>
+
+                        </aside>
+
+                    </aside>
+                </article>
+
+                <article class="d-none d-md-block card border-0">
+                    <aside class="card-body text-center">
+                        <img src="assets/imgs/main/teacher-4.png" alt="teacher-4">
+                        <aside class="card-text">
+
+                            <aside class="position-rel head-line">
+                                <h3>Yochai benkler</h3>
+                                <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                            </aside>
+
+                            <p>Launch your career as a full-stack web developer with our proven curriculum
+                                and
+                                passionate instructors.</p>
+
+                        </aside>
+
+                    </aside>
+                </article>
+
+                <article class="d-none d-md-block card border-0">
+                    <aside class="card-body text-center">
+                        <img src="assets/imgs/main/teacher-5.png" alt="teacher-5">
+                        <aside class="card-text">
+
+                            <aside class="position-rel head-line">
+                                <h3>Yochai benkler</h3>
+                                <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                            </aside>
+
+                            <p>Launch your career as a full-stack web developer with our proven curriculum
+                                and
+                                passionate instructors.</p>
+
+                        </aside>
+
+                    </aside>
+                </article>
+
+                <article class="d-none d-md-block card border-0">
+                    <aside class="card-body text-center">
+                        <img src="assets/imgs/main/teacher-6.png" alt="teacher-6">
+                        <aside class="card-text">
+
+                            <aside class="position-rel head-line">
+                                <h3>Yochai benkler</h3>
+                                <p>Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</p>
+                            </aside>
+
+                            <p>Launch your career as a full-stack web developer with our proven curriculum
+                                and
+                                passionate instructors.</p>
+
+                        </aside>
+                    </aside>
+                </article>
+
+            </aside>
+
+            <button type="button"
+                class="d-md-none btn btn-light text-body btn-block btn-lg border-3 border-color py-3">MORE <span
+                    class="prim-color">⯆</span></button>
         </section>
 
-        <section class="row partners d-none d-md-block">
-            .partners
+        <section class="row partners d-none d-md-block py-5">
+
+            <h4 class="position-rel d-flex justify-content-center text-secondary border-head mb-4">Partner</h4>
+
+            <article class="container d-flex justify-content-around align-items-center">
+                <aside class="col text-center">
+                    <img class="img-fluid" src="assets/imgs/main/mozilla-logo.png" alt="mozilla">
+                </aside>
+
+                <aside class="col text-center">
+                    <img class="img-fluid" src="assets/imgs/main/google-logo.png" alt="google">
+                </aside>
+
+                <aside class="col text-center">
+                    <img class="img-fluid" src="assets/imgs/main/naver-logo.png" alt="google">
+                </aside>
+
+                <aside class="col text-center">
+                    <img class="img-fluid" src="assets/imgs/main/dk-logo.png" alt="google">
+                </aside>
+
+                <aside class="col text-center">
+                    <img src="assets/imgs/main/airbnb-logo.png" alt="google">
+                </aside>
+
+            </article>
+
         </section>
 
         <footer class="row footer d-none d-md-block">
-            .footer
+            <article class="container d-flex justify-content-center align-items-center text-center">
+                <aside class="col-4">
+                    <img class="img-fluid w-50" src="assets/imgs/hm-logo.svg" alt="High Mountain logo">
+                </aside>
+
+                <aside class="col-8">
+                    <p class="lead">2020 High Mountain Egypt. © Reserved</p>
+                </aside>
+            </article>
         </footer>
 
     </main>

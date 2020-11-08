@@ -11,24 +11,15 @@
 }
 
 .main {
-  background-color: lightgreen;
   font-family: lato, sans-serif;
 }
 
-.header-sm {
-  background-color: none;
-}
-
-.header {
-  background-color: lightpink;
-}
-
 .top-nav {
-  background-color: lightskyblue;
+  background-color: #3e3e3e;
 }
 
-.bot-nav {
-  background-color: lightyellow;
+.bot-nav .bot-nav-img {
+  max-height: 80px;
 }
 
 .position-rel {
@@ -73,9 +64,8 @@
   border-color: lightgray;
 }
 
-/* Mobile Nav Menu
- * Made by Erik Terwan (MIT)
- * With my Modifications */
+/* Mobile Nav Menu * Made by Erik Terwan (MIT)
+* With my Modifications */
 .menuToggle {
   display: block;
   z-index: 1;
@@ -90,8 +80,8 @@
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
-  left: -5px;
+  top: -2px;
+  left: 15px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
@@ -185,18 +175,16 @@
 
 /* Mobile Nav Menu End */
 .jumbotron {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-main.png");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-main.png") center no-repeat;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 50%;
+  height: 700px;
 }
 
 .our-prog,
 .our-tech {
   /* flex contanier */
-  background-image: url("/assets/imgs/metal-pattern.png");
+  background-image: url("../imgs/metal-pattern.png");
   background-repeat: repeat;
   background-size: auto;
   display: -webkit-box;
@@ -215,16 +203,20 @@
   gap: 15px;
 }
 
-.our-prog .card,
-.our-tech .card {
+.our-prog .cards .card,
+.our-tech .cards .card {
   background-color: rgba(255, 255, 255, 0.061);
 }
 
-.our-prog .card-body,
-.our-tech .card-body {
+.our-prog .cards .card .card-body,
+.our-tech .cards .card .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -234,24 +226,24 @@
   gap: 40px;
 }
 
-.our-prog .card-body i,
-.our-tech .card-body i {
+.our-prog .cards .card .card-body i,
+.our-tech .cards .card .card-body i {
   font-size: 350%;
 }
 
-.our-prog .card-body .card-title,
-.our-tech .card-body .card-title {
+.our-prog .cards .card .card-body .card-title,
+.our-tech .cards .card .card-body .card-title {
   text-align: left;
 }
 
-.our-prog .card-body .card-text,
-.our-tech .card-body .card-text {
+.our-prog .cards .card .card-body .card-text,
+.our-tech .cards .card .card-body .card-text {
   font-size: 80%;
   text-align: left;
 }
 
-.our-prog .card-body .card-text .head-line::after,
-.our-tech .card-body .card-text .head-line::after {
+.our-prog .cards .card .card-body .card-text .head-line::after,
+.our-tech .cards .card .card-body .card-text .head-line::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -265,10 +257,61 @@
 }
 
 .partners {
-  background-color: saddlebrown;
+  background-color: #414246;
 }
 
 .footer {
-  background-color: maroon;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .our-prog .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+  }
+  .our-prog .cards .card {
+    height: 300px;
+    width: 250px;
+  }
+  .our-prog .cards .card .card-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    gap: 20px;
+  }
+  .our-prog .cards .card .card-body .card-title {
+    text-align: center;
+  }
+  .our-prog .cards .card .card-body .card-text {
+    text-align: center;
+  }
+  .our-tech .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .our-tech .cards .card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .our-tech .cards .card {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
