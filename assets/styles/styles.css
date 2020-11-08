@@ -1,12 +1,12 @@
 @font-face {
   font-family: cocogoose;
-  src: url(/assets/styles/fonts/cocogoose.ttf);
+  src: url(fonts/cocogoose.ttf);
   /* dafont.com */
 }
 
 @font-face {
   font-family: lato;
-  src: url(/assets/styles/fonts/Lato.ttf);
+  src: url(fonts/Lato.ttf);
   /* Google fonts */
 }
 
@@ -60,8 +60,8 @@
 }
 
 .text-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(/assets/imgs/main/bg-text.jpg) no-repeat;
-  background: linear-gradient(#e9301bc6, #e22d18a8), url(/assets/imgs/main/bg-text.jpg) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(../imgs/main/bg-text.jpg) no-repeat;
+  background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -185,8 +185,8 @@
 
 /* Mobile Nav Menu End */
 .jumbotron {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/assets/imgs/main/bg-main.png");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/assets/imgs/main/bg-main.png");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-main.png");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

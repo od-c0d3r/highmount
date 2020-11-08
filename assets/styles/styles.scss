@@ -2,13 +2,13 @@ $primColor : #ec5242;
 
 @font-face {
     font-family: cocogoose;
-    src: url(/assets/styles/fonts/cocogoose.ttf);
+    src: url(fonts/cocogoose.ttf);
     /* dafont.com */
 }
 
 @font-face {
     font-family: lato;
-    src: url(/assets/styles/fonts/Lato.ttf);
+    src: url(fonts/Lato.ttf);
     /* Google fonts */
 }
 
@@ -62,7 +62,7 @@ $primColor : #ec5242;
 }
 
 .text-bg {
-    background: linear-gradient(#e9301bc6, #e22d18a8), url(/assets/imgs/main/bg-text.jpg) no-repeat;
+    background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -175,7 +175,7 @@ $primColor : #ec5242;
 /* Mobile Nav Menu End */
 
 .jumbotron {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/assets/imgs/main/bg-main.png");
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
