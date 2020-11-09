@@ -56,14 +56,15 @@ $primColor : #ec5242;
     background-color: #ec5242;
 }
 
-.text-bg {
+.text-bg,
+.about-text-bg {
     background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: top;
     background-size: cover;
-    font-size: 10vw;
+    font-size: 8vw;
 }
 
 .border-color {
@@ -175,7 +176,8 @@ $primColor : #ec5242;
 }
 
 .our-prog,
-.our-tech {
+.our-tech,
+.about-our-tech {
     /* flex contanier */
     background-image: url('../imgs/metal-pattern.png');
     background-repeat: repeat;
@@ -190,7 +192,7 @@ $primColor : #ec5242;
     .cards {
         .card {
             background-color: rgba(255, 255, 255, 0.061);
-            
+
             .card-body {
                 display: flex;
                 flex-direction: row;
@@ -199,7 +201,7 @@ $primColor : #ec5242;
                 gap: 40px;
 
                 i {
-                    // font-size: 350%;
+                    font-size: 2rem;
                 }
 
                 .card-title {
@@ -223,9 +225,14 @@ $primColor : #ec5242;
     }
 }
 
-.our-tech {
+.our-tech,
+.about-our-tech {
     background-image: none;
     background-color: #f8f8f8;
+}
+
+.about-our-tech {
+    background-color: #fff;
 }
 
 .partners {
@@ -239,25 +246,33 @@ $primColor : #ec5242;
 
 @media screen and (max-width: 576px) {
     .text-bg {
-        font-size: 18vw; 
+        font-size: 18vw;
+    }
+
+    .about-text-bg {
+        font-size: 15vw;
     }
 
     .our-prog,
-    .our-tech {
+    .our-tech,
+    .about-our-tech {
         .cards {
             .card {
                 .card-body {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+
                     i {
                         font-size: 2rem;
                     }
+
                     .card-title {
                         font-size: 0.8em;
                     }
                 }
             }
+
             .btn {
                 font-size: 1rem;
             }
@@ -294,7 +309,8 @@ $primColor : #ec5242;
         }
     }
 
-    .our-tech {
+    .our-tech,
+    .about-our-tech {
         .cards {
             display: flex;
             flex-direction: row;
@@ -305,10 +321,21 @@ $primColor : #ec5242;
             }
         }
     }
+
+    .about-our-tech .cards .card {
+        width: 50%;
+    }
+
+    .about-footer {
+        background-color: #3e3e3e;
+        color: white;
+    }
 }
 
 @media (min-width: 992px) {
-    .our-tech {
+
+    .our-tech,
+    .about-our-tech {
         .cards {
             .card {
                 width: 50%;

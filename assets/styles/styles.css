@@ -50,7 +50,8 @@
   background-color: #ec5242;
 }
 
-.text-bg {
+.text-bg,
+.about-text-bg {
   background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(../imgs/main/bg-text.jpg) no-repeat;
   background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
   -webkit-background-clip: text;
@@ -58,7 +59,7 @@
   -webkit-text-fill-color: transparent;
   background-position: top;
   background-size: cover;
-  font-size: 10vw;
+  font-size: 8vw;
 }
 
 .border-color {
@@ -183,7 +184,8 @@
 }
 
 .our-prog,
-.our-tech {
+.our-tech,
+.about-our-tech {
   /* flex contanier */
   background-image: url("../imgs/metal-pattern.png");
   background-repeat: repeat;
@@ -205,12 +207,14 @@
 }
 
 .our-prog .cards .card,
-.our-tech .cards .card {
+.our-tech .cards .card,
+.about-our-tech .cards .card {
   background-color: rgba(255, 255, 255, 0.061);
 }
 
 .our-prog .cards .card .card-body,
-.our-tech .cards .card .card-body {
+.our-tech .cards .card .card-body,
+.about-our-tech .cards .card .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,19 +231,28 @@
   gap: 40px;
 }
 
+.our-prog .cards .card .card-body i,
+.our-tech .cards .card .card-body i,
+.about-our-tech .cards .card .card-body i {
+  font-size: 2rem;
+}
+
 .our-prog .cards .card .card-body .card-title,
-.our-tech .cards .card .card-body .card-title {
+.our-tech .cards .card .card-body .card-title,
+.about-our-tech .cards .card .card-body .card-title {
   text-align: left;
 }
 
 .our-prog .cards .card .card-body .card-text,
-.our-tech .cards .card .card-body .card-text {
+.our-tech .cards .card .card-body .card-text,
+.about-our-tech .cards .card .card-body .card-text {
   font-size: 80%;
   text-align: left;
 }
 
 .our-prog .cards .card .card-body .card-text .head-line::after,
-.our-tech .cards .card .card-body .card-text .head-line::after {
+.our-tech .cards .card .card-body .card-text .head-line::after,
+.about-our-tech .cards .card .card-body .card-text .head-line::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -247,9 +260,14 @@
   border-bottom: 2px solid lightgray;
 }
 
-.our-tech {
+.our-tech,
+.about-our-tech {
   background-image: none;
   background-color: #f8f8f8;
+}
+
+.about-our-tech {
+  background-color: #fff;
 }
 
 .partners {
@@ -264,8 +282,12 @@
   .text-bg {
     font-size: 18vw;
   }
+  .about-text-bg {
+    font-size: 15vw;
+  }
   .our-prog .cards .card .card-body,
-  .our-tech .cards .card .card-body {
+  .our-tech .cards .card .card-body,
+  .about-our-tech .cards .card .card-body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,15 +298,18 @@
     gap: 20px;
   }
   .our-prog .cards .card .card-body i,
-  .our-tech .cards .card .card-body i {
+  .our-tech .cards .card .card-body i,
+  .about-our-tech .cards .card .card-body i {
     font-size: 2rem;
   }
   .our-prog .cards .card .card-body .card-title,
-  .our-tech .cards .card .card-body .card-title {
+  .our-tech .cards .card .card-body .card-title,
+  .about-our-tech .cards .card .card-body .card-title {
     font-size: 0.8em;
   }
   .our-prog .cards .btn,
-  .our-tech .cards .btn {
+  .our-tech .cards .btn,
+  .about-our-tech .cards .btn {
     font-size: 1rem;
   }
 }
@@ -318,7 +343,8 @@
   .our-prog .cards .card .card-body .card-text {
     text-align: center;
   }
-  .our-tech .cards {
+  .our-tech .cards,
+  .about-our-tech .cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -329,13 +355,22 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .our-tech .cards .card {
+  .our-tech .cards .card,
+  .about-our-tech .cards .card {
     width: 100%;
+  }
+  .about-our-tech .cards .card {
+    width: 50%;
+  }
+  .about-footer {
+    background-color: #3e3e3e;
+    color: white;
   }
 }
 
 @media (min-width: 992px) {
-  .our-tech .cards .card {
+  .our-tech .cards .card,
+  .about-our-tech .cards .card {
     width: 50%;
   }
 }
