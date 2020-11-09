@@ -1,4 +1,5 @@
 $primColor : #ec5242;
+// $enable-responsive-font-sizes : true;
 
 @font-face {
     font-family: cocogoose;
@@ -62,7 +63,7 @@ $primColor : #ec5242;
     -webkit-text-fill-color: transparent;
     background-position: top;
     background-size: cover;
-
+    font-size: 10vw;
 }
 
 .border-color {
@@ -170,7 +171,7 @@ $primColor : #ec5242;
 .jumbotron {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 100%;
 }
 
 .our-prog,
@@ -189,7 +190,7 @@ $primColor : #ec5242;
     .cards {
         .card {
             background-color: rgba(255, 255, 255, 0.061);
-
+            
             .card-body {
                 display: flex;
                 flex-direction: row;
@@ -198,7 +199,7 @@ $primColor : #ec5242;
                 gap: 40px;
 
                 i {
-                    font-size: 350%;
+                    // font-size: 350%;
                 }
 
                 .card-title {
@@ -234,6 +235,34 @@ $primColor : #ec5242;
 
 .footer {
     background-color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+    .text-bg {
+        font-size: 18vw; 
+    }
+
+    .our-prog,
+    .our-tech {
+        .cards {
+            .card {
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    i {
+                        font-size: 2rem;
+                    }
+                    .card-title {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            .btn {
+                font-size: 1rem;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {

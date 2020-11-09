@@ -58,6 +58,7 @@
   -webkit-text-fill-color: transparent;
   background-position: top;
   background-size: cover;
+  font-size: 10vw;
 }
 
 .border-color {
@@ -178,7 +179,7 @@
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-main.png") center no-repeat;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
   background-size: cover;
-  height: 700px;
+  height: 100%;
 }
 
 .our-prog,
@@ -226,11 +227,6 @@
   gap: 40px;
 }
 
-.our-prog .cards .card .card-body i,
-.our-tech .cards .card .card-body i {
-  font-size: 350%;
-}
-
 .our-prog .cards .card .card-body .card-title,
 .our-tech .cards .card .card-body .card-title {
   text-align: left;
@@ -262,6 +258,35 @@
 
 .footer {
   background-color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .text-bg {
+    font-size: 18vw;
+  }
+  .our-prog .cards .card .card-body,
+  .our-tech .cards .card .card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .our-prog .cards .card .card-body i,
+  .our-tech .cards .card .card-body i {
+    font-size: 2rem;
+  }
+  .our-prog .cards .card .card-body .card-title,
+  .our-tech .cards .card .card-body .card-title {
+    font-size: 0.8em;
+  }
+  .our-prog .cards .btn,
+  .our-tech .cards .btn {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
