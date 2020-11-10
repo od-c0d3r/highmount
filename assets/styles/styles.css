@@ -1,13 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @font-face {
   font-family: cocogoose;
   src: url(fonts/cocogoose.ttf);
-  /* dafont.com */
+  /* from dafont.com */
 }
 
 @font-face {
   font-family: lato;
   src: url(fonts/Lato.ttf);
-  /* Google fonts */
+  /* from Google fonts */
+}
+
+/* Pricing Table Style
+  from Daniel Zawadzki CodePen
+  with Modifications.
+*/
+.plans-card-header,
+.plans-list-group-item {
+  background-color: transparent;
+}
+
+.plans-card {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 2.25rem 0;
+  position: relative;
+  will-change: transform;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.374);
+}
+
+.plans-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #ec5242;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.plans-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.plans-card:hover::after {
+  width: 100%;
+}
+
+.plans-card .card-header,
+.plans-card .plans-card-header {
+  padding-left: 2rem;
+  border-bottom: 0;
+}
+
+.plans-card .card-title {
+  margin-bottom: 1rem;
+}
+
+.plans-card .card-block {
+  padding-top: 0;
+}
+
+.plans-card .list-group-item {
+  border: 0;
+  padding: 0.25rem;
+  color: #808080;
+  font-weight: 300;
+}
+
+.display-2 {
+  font-size: 7rem;
+  letter-spacing: -0.5rem;
+}
+
+.display-2 .currency {
+  font-size: 2.75rem;
+  position: relative;
+  font-weight: 400;
+  top: -45px;
+  letter-spacing: 0;
+}
+
+.display-2 .period {
+  font-size: 1rem;
+  color: #b3b3b3;
+  letter-spacing: 0;
+}
+
+.plans-btn {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #a6a6a6;
+  border-radius: 0;
+  padding: 0.75rem 1.25rem;
+  letter-spacing: 1px;
+  background-color: #f8f8f8;
+}
+
+.btn-gradient {
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  color: white;
+  background-color: #ec5242;
 }
 
 .main {
@@ -39,7 +147,7 @@
 }
 
 .font-coco {
-  font-family: cocogoose;
+  font-family: cocogoose, sans-serif;
 }
 
 .prim-color {
@@ -55,7 +163,6 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(../imgs/main/bg-text.jpg) no-repeat;
   background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: top;
   background-size: cover;
@@ -99,8 +206,8 @@
   background: #232323;
   border-radius: 3px;
   z-index: 1;
-  -webkit-transform-origin: 4px 0px;
-          transform-origin: 4px 0px;
+  -webkit-transform-origin: 4px 0;
+          transform-origin: 4px 0;
   -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -181,6 +288,12 @@
   background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
   background-size: cover;
   height: 100%;
+}
+
+.plans-jumbotron {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-text.jpg") no-repeat;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-text.jpg") no-repeat;
+  background-size: cover;
 }
 
 .our-prog,

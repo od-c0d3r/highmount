@@ -1,345 +1,458 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+// Varibles
 $primColor : #ec5242;
-// $enable-responsive-font-sizes : true;
+$main-font: 'Roboto', sans-serif;
+$light-gray: #f8f8f8;
+$main-font-color: #808080;
+$main-font-weight: 300;
 
 @font-face {
-    font-family: cocogoose;
-    src: url(fonts/cocogoose.ttf);
-    /* dafont.com */
+  font-family: cocogoose;
+  src: url(fonts/cocogoose.ttf);
+
+  /* from dafont.com */
 }
 
 @font-face {
-    font-family: lato;
-    src: url(fonts/Lato.ttf);
-    /* Google fonts */
+  font-family: lato;
+  src: url(fonts/Lato.ttf);
+
+  /* from Google fonts */
+}
+
+/* Pricing Table Style
+  from Daniel Zawadzki CodePen
+  with Modifications.
+*/
+// Tables
+
+.plans-card-header,
+.plans-list-group-item {
+  background-color: transparent;
+}
+
+.plans-card {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  padding: 2.25rem 0;
+  position: relative;
+  will-change: transform;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.374);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: $primColor;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  & .card-header,
+  .plans-card-header {
+    padding-left: 2rem;
+    border-bottom: 0;
+  }
+
+  & .card-title {
+    margin-bottom: 1rem;
+  }
+
+  & .card-block {
+    padding-top: 0;
+  }
+
+  & .list-group-item {
+    border: 0;
+    padding: 0.25rem;
+    color: $main-font-color;
+    font-weight: $main-font-weight;
+  }
+}
+
+// Price
+.display-2 {
+  font-size: 7rem;
+  letter-spacing: -0.5rem;
+
+  & .currency {
+    font-size: 2.75rem;
+    position: relative;
+    font-weight: $main-font-weight + 100;
+    top: -45px;
+    letter-spacing: 0;
+  }
+
+  & .period {
+    font-size: 1rem;
+    color: lighten($main-font-color, 20%);
+    letter-spacing: 0;
+  }
+}
+
+// Buttons
+.plans-btn {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: $main-font-weight + 200;
+  color: lighten($main-font-color, 15%);
+  border-radius: 0;
+  padding: 0.75rem 1.25rem;
+  letter-spacing: 1px;
+  background-color: $light-gray;
+}
+
+.btn-gradient {
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    color: white;
+    background-color: $primColor;
+  }
 }
 
 .main {
-    font-family: lato, sans-serif;
+  font-family: lato, sans-serif;
 }
 
 .top-nav {
-    background-color: #3e3e3e;
+  background-color: #3e3e3e;
 }
 
 .bot-nav {
-
-    .bot-nav-img {
-        max-height: 80px;
-    }
+  .bot-nav-img {
+    max-height: 80px;
+  }
 }
 
 .position-rel {
-    position: relative;
+  position: relative;
 }
 
 .border-head::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    bottom: -17px;
-    border-bottom: 2px solid $primColor;
+  content: "";
+  position: absolute;
+  width: 30px;
+  bottom: -17px;
+  border-bottom: 2px solid $primColor;
 }
 
 .border-3 {
-    border-width: 3px !important;
+  border-width: 3px !important;
 }
 
 .font-coco {
-    font-family: cocogoose;
+  font-family: cocogoose, sans-serif;
 }
 
 .prim-color {
-    color: #ec5242;
+  color: #ec5242;
 }
 
 .prim-bg {
-    background-color: #ec5242;
+  background-color: #ec5242;
 }
 
 .text-bg,
 .about-text-bg {
-    background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: top;
-    background-size: cover;
-    font-size: 8vw;
+  background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: top;
+  background-size: cover;
+  font-size: 8vw;
 }
 
 .border-color {
-    border-color: lightgray;
+  border-color: lightgray;
 }
 
 /* Mobile Nav Menu * Made by Erik Terwan (MIT)
 * With my Modifications */
 .menuToggle {
+  display: block;
+  z-index: 1;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
+  input {
     display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -2px;
+    left: 15px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  span {
+    display: block;
+    width: 39px;
+    height: 6px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #232323; //Burger Color
+    border-radius: 3px;
     z-index: 1;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    transform-origin: 4px 0;
+    transition:
+      transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+  }
 
-    input {
-        display: block;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: -2px;
-        left: 15px;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 2;
-        -webkit-touch-callout: none;
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  input:checked ~ ul {
+    transform: none;
+  }
+
+  .menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+    li {
+      padding: 10px 0;
+      font-size: 22px;
+
+      a {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+      }
+
+      :hover {
+        color: tomato;
+      }
     }
-
-    span {
-        display: block;
-        width: 39px;
-        height: 6px;
-        margin-bottom: 5px;
-        position: relative;
-        background: #232323; //Burger Color
-        border-radius: 3px;
-        z-index: 1;
-        transform-origin: 4px 0px;
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            opacity 0.55s ease;
-    }
-
-    span:first-child {
-        transform-origin: 0% 0%;
-    }
-
-    span:nth-last-child(2) {
-        transform-origin: 0% 100%;
-    }
-
-    input:checked~span {
-        opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: #232323;
-    }
-
-    input:checked~span:nth-last-child(3) {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
-
-    input:checked~span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(0, -1px);
-    }
-
-    input:checked~ul {
-        transform: none;
-    }
-
-    .menu {
-        position: absolute;
-        width: 300px;
-        margin: -100px 0 0 -50px;
-        padding: 50px;
-        padding-top: 125px;
-        background: #ededed;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
-        li {
-            padding: 10px 0;
-            font-size: 22px;
-
-            a {
-                text-decoration: none;
-                color: #232323;
-                transition: color 0.3s ease;
-            }
-
-            :hover {
-                color: tomato;
-            }
-        }
-    }
-
+  }
 }
 
 /* Mobile Nav Menu End */
 
 .jumbotron {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
-    background-size: cover;
-    height: 100%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.plans-jumbotron {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-text.jpg") no-repeat;
+  background-size: cover;
 }
 
 .our-prog,
 .our-tech,
 .about-our-tech {
-    /* flex contanier */
-    background-image: url('../imgs/metal-pattern.png');
-    background-repeat: repeat;
-    background-size: auto;
+  /* flex contanier */
+  background-image: url('../imgs/metal-pattern.png');
+  background-repeat: repeat;
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  .cards {
+    .card {
+      background-color: rgba(255, 255, 255, 0.061);
 
-    .cards {
-        .card {
-            background-color: rgba(255, 255, 255, 0.061);
+      .card-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
 
-            .card-body {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                gap: 40px;
-
-                i {
-                    font-size: 2rem;
-                }
-
-                .card-title {
-                    text-align: left;
-                }
-
-                .card-text {
-                    font-size: 80%;
-                    text-align: left;
-
-                    .head-line::after {
-                        content: "";
-                        position: absolute;
-                        width: 30px;
-                        bottom: -10px;
-                        border-bottom: 2px solid lightgray;
-                    }
-                }
-            }
+        i {
+          font-size: 2rem;
         }
+
+        .card-title {
+          text-align: left;
+        }
+
+        .card-text {
+          font-size: 80%;
+          text-align: left;
+
+          .head-line::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            bottom: -10px;
+            border-bottom: 2px solid lightgray;
+          }
+        }
+      }
     }
+  }
 }
 
 .our-tech,
 .about-our-tech {
-    background-image: none;
-    background-color: #f8f8f8;
+  background-image: none;
+  background-color: #f8f8f8;
 }
 
 .about-our-tech {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .partners {
-    background-color: #414246;
-
+  background-color: #414246;
 }
 
 .footer {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 576px) {
-    .text-bg {
-        font-size: 18vw;
-    }
+  .text-bg {
+    font-size: 18vw;
+  }
 
-    .about-text-bg {
-        font-size: 15vw;
-    }
+  .about-text-bg {
+    font-size: 15vw;
+  }
 
-    .our-prog,
-    .our-tech,
-    .about-our-tech {
-        .cards {
-            .card {
-                .card-body {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
+  .our-prog,
+  .our-tech,
+  .about-our-tech {
+    .cards {
+      .card {
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
 
-                    i {
-                        font-size: 2rem;
-                    }
+          i {
+            font-size: 2rem;
+          }
 
-                    .card-title {
-                        font-size: 0.8em;
-                    }
-                }
-            }
-
-            .btn {
-                font-size: 1rem;
-            }
+          .card-title {
+            font-size: 0.8em;
+          }
         }
+      }
+
+      .btn {
+        font-size: 1rem;
+      }
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .our-prog {
+  .our-prog {
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+      .card {
+        height: 300px;
+        width: 250px;
 
-            .card {
-                height: 300px;
-                width: 250px;
+        .card-body {
+          flex-direction: column;
+          align-content: flex-start;
+          gap: 20px;
 
-                .card-body {
-                    flex-direction: column;
-                    align-content: flex-start;
-                    gap: 20px;
+          .card-title {
+            text-align: center;
+          }
 
-                    .card-title {
-                        text-align: center;
-                    }
-
-                    .card-text {
-                        text-align: center;
-                    }
-                }
-            }
+          .card-text {
+            text-align: center;
+          }
         }
+      }
     }
+  }
 
-    .our-tech,
-    .about-our-tech {
-        .cards {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+  .our-tech,
+  .about-our-tech {
+    .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
 
-            .card {
-                width: 100%;
-            }
-        }
+      .card {
+        width: 100%;
+      }
     }
+  }
 
-    .about-our-tech .cards .card {
-        width: 50%;
-    }
+  .about-our-tech .cards .card {
+    width: 50%;
+  }
 
-    .about-footer {
-        background-color: #3e3e3e;
-        color: white;
-    }
+  .about-footer {
+    background-color: #3e3e3e;
+    color: white;
+  }
 }
 
 @media (min-width: 992px) {
-
-    .our-tech,
-    .about-our-tech {
-        .cards {
-            .card {
-                width: 50%;
-            }
-        }
+  .our-tech,
+  .about-our-tech {
+    .cards {
+      .card {
+        width: 50%;
+      }
     }
+  }
 }
