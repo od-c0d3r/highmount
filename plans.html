@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
   <title>High Mountain School</title>
 </head>
 
@@ -42,8 +45,8 @@
           <h2 class="d-none">heading</h2>
           <img class="bot-nav-img" src="assets/imgs/hm-logo.svg" alt="High Mountain logo">
           <ul class="list-unstyled">
+            <li class="list-inline-item"><a class="px-4 text-secondary" href="index.html">Home</a></li>
             <li class="list-inline-item"><a class="px-4 text-secondary" href="about.html">About</a></li>
-            <li class="list-inline-item"><a class="px-4 text-secondary" href="index.html">Program</a></li>
             <li class="list-inline-item"><a class="px-4 text-secondary" href="#plans">Plans</a></li>
             <li class="list-inline-item"><a class="px-5 ml-4 btn btn-outline-danger border-3" href="plans.html">Join</a>
             </li>
@@ -62,8 +65,8 @@
             <span></span>
             <ul class="menu">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#plans">Plans</a></li>
               <li><a href="about.html">About</a></li>
+              <li><a href="#plans">Plans</a></li>
             </ul>
           </div>
         </nav>
@@ -74,6 +77,64 @@
           about High Mountain School</p>
       </article>
       <!-- Plans Table from Daniel Zawadzki CodePen with Modifications -->
+      <section class="container py-5 text-center">
+        <h2 class="d-none">hello</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                    checked>
+                  <label class="form-check-label prim-color font-weight-bold" for="exampleRadios1">
+                    Plan 1
+                  </label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option1"
+                    checked>
+                  <label class="form-check-label prim-color font-weight-bold" for="exampleRadios2">
+                    Plan 2
+                  </label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"
+                    checked>
+                  <label class="form-check-label prim-color font-weight-bold" for="exampleRadios3">
+                    Plan 3
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn  btn-lg prim-bg text-white my-4">Select Plan</button>
+      </section>
       <section class="container py-5">
         <div class="row flex-items-xs-middle flex-items-xs-center">
           <!-- Table #1  -->
@@ -154,7 +215,7 @@
 
         <aside class="col-md-6 text-white-50 d-none d-md-block">
           <small>2020 High Mountain Egypt.</small><br>
-          <small>© Reserved By <a class="badge badge-info" href="https://github.com/od-c0d3r">OmarR.</a></small>
+          <p>© Reserved By <a class="badge badge-info" href="https://github.com/od-c0d3r">OmarR.</a></p>
         </aside>
 
       </article>

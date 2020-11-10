@@ -1,20 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @font-face {
   font-family: cocogoose;
-  src: url(fonts/cocogoose.ttf);
+  src: url(fonts/cocogoose.eot);
+  /* IE9 Compat Modes */
+  src: url(fonts/cocogoose.eot?#iefix) format("embedded-opentype"), url(fonts/cocogoose.woff2) format("woff2"), url(fonts/cocogoose.woff) format("woff"), url(fonts/cocogoose.ttf) format("truetype"), url(fonts/cocogoose.svg#svgFontName) format("svg");
+  /* Legacy iOS */
   /* from dafont.com */
 }
 
 @font-face {
   font-family: lato;
-  src: url(fonts/Lato.ttf);
+  src: url(fonts/Lato.eot);
+  /* IE9 Compat Modes */
+  src: url(fonts/Lato.eot?#iefix) format("embedded-opentype"), url(fonts/Lato.woff2) format("woff2"), url(fonts/Lato.woff) format("woff"), url(fonts/Lato.ttf) format("truetype"), url(fonts/Lato.svg#svgFontName) format("svg");
+  /* Legacy iOS */
   /* from Google fonts */
 }
 
 /* Pricing Table Style
   from Daniel Zawadzki CodePen
-  with Modifications.
-*/
+  with Modifications. */
 .plans-card-header,
 .plans-list-group-item {
   background-color: transparent;
@@ -143,7 +147,7 @@
 }
 
 .border-3 {
-  border-width: 3px !important;
+  border-width: 3px;
 }
 
 .font-coco {
@@ -160,8 +164,8 @@
 
 .text-bg,
 .about-text-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(../imgs/main/bg-text.jpg) no-repeat;
-  background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/main/bg-text.jpg) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(../imgs/bg-text.jpg) no-repeat;
+  background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/bg-text.jpg) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: top;
@@ -284,15 +288,15 @@
 
 /* Mobile Nav Menu End */
 .jumbotron {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-main.png") center no-repeat;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-main.png") center no-repeat;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/bg-main.png") center no-repeat;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/bg-main.png") center no-repeat;
   background-size: cover;
   height: 100%;
 }
 
 .plans-jumbotron {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/main/bg-text.jpg") no-repeat;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/main/bg-text.jpg") no-repeat;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/bg-text.jpg") no-repeat;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/bg-text.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -379,14 +383,11 @@
   background-color: #f8f8f8;
 }
 
-.about-our-tech {
-  background-color: #fff;
-}
-
 .partners {
   background-color: #414246;
 }
 
+.about-our-tech,
 .footer {
   background-color: #fff;
 }
