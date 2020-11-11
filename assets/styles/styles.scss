@@ -320,7 +320,6 @@ $main-font-weight: 300;
 
       .card-body {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 40px;
@@ -365,6 +364,29 @@ $main-font-weight: 300;
   background-color: #fff;
 }
 
+.overlay-img::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ec534293;
+}
+
+.overly-text {
+  font-size: 2em;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 576px) {
   .text-bg {
     font-size: 18vw;
@@ -380,8 +402,6 @@ $main-font-weight: 300;
     .cards {
       .card {
         .card-body {
-          display: flex;
-          flex-direction: column;
           gap: 20px;
 
           i {
@@ -390,6 +410,14 @@ $main-font-weight: 300;
 
           .card-title {
             font-size: 0.8em;
+          }
+
+          .card-text {
+            font-size: 0.6em;
+
+            .em-2 {
+              font-size: 2em;
+            }
           }
         }
       }

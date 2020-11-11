@@ -335,10 +335,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -392,6 +388,30 @@
   background-color: #fff;
 }
 
+.overlay-img::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ec534293;
+}
+
+.overly-text {
+  font-size: 2em;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 576px) {
   .text-bg {
     font-size: 18vw;
@@ -402,13 +422,6 @@
   .our-prog .cards .card .card-body,
   .our-tech .cards .card .card-body,
   .about-our-tech .cards .card .card-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     gap: 20px;
   }
   .our-prog .cards .card .card-body i,
@@ -420,6 +433,16 @@
   .our-tech .cards .card .card-body .card-title,
   .about-our-tech .cards .card .card-body .card-title {
     font-size: 0.8em;
+  }
+  .our-prog .cards .card .card-body .card-text,
+  .our-tech .cards .card .card-body .card-text,
+  .about-our-tech .cards .card .card-body .card-text {
+    font-size: 0.6em;
+  }
+  .our-prog .cards .card .card-body .card-text .em-2,
+  .our-tech .cards .card .card-body .card-text .em-2,
+  .about-our-tech .cards .card .card-body .card-text .em-2 {
+    font-size: 2em;
   }
   .our-prog .cards .btn,
   .our-tech .cards .btn,

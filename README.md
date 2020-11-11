@@ -6,7 +6,7 @@ Give a ⭐️ if you like this project!<br><br>
 
 ![screenshot](assets/imgs/screenshot-2.png)
 
- _High Mountain Online Bootcamp is a online bassed school teaching a wide varity of Software Engineering tracks._
+ _High Mountain Online Bootcamp is an online-based school teaching a wide variety of Software Engineering tracks._
 
  ## 🛠 Colors and Typograph :
 
@@ -37,16 +37,16 @@ Give a ⭐️ if you like this project!<br><br>
 
 Follow these steps to get a local copy up and running :
 
-1. Install `git` on your local machine
-1. Type `git init` in the Terminal
-1. Clone the repository to your local machine `https://github.com/od-c0d3r/highmount.git`
-1. Cd into the repository `cd conference-page`
-1. Open the `index.html` file and run it with any browser of your choice
+1. Install `git` on your local machine.
+1. Type `git init` in the Terminal.
+1. Clone the repository to your local machine `git clone https://github.com/od-c0d3r/highmount.git`.
+1. Cd into the repository `cd highmount`.
+1. Open the `index.html` file and run it with your editor.
 
 ## 👤 Auther Omar R.
 
 - [<img alt="Twitter Follow" src="https://img.shields.io/github/followers/od-c0d3r?label=Github&style=social">](https://github.com/od-c0d3r)
-- <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/od_coder?label=Twitter&style=social">
+- [<img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/od_coder?label=Twitter&style=social">](https://twitter.com/od_coder)
 
 ## Show your support
 
@@ -60,4 +60,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
