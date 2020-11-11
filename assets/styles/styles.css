@@ -1,0 +1,512 @@
+@font-face {
+  font-family: cocogoose;
+  src: url(fonts/cocogoose.eot);
+  /* IE9 Compat Modes */
+  src: url(fonts/cocogoose.eot?#iefix) format("embedded-opentype"), url(fonts/cocogoose.woff2) format("woff2"), url(fonts/cocogoose.woff) format("woff"), url(fonts/cocogoose.ttf) format("truetype"), url(fonts/cocogoose.svg#svgFontName) format("svg");
+  /* Legacy iOS */
+  /* from dafont.com */
+}
+
+@font-face {
+  font-family: lato;
+  src: url(fonts/Lato.eot);
+  /* IE9 Compat Modes */
+  src: url(fonts/Lato.eot?#iefix) format("embedded-opentype"), url(fonts/Lato.woff2) format("woff2"), url(fonts/Lato.woff) format("woff"), url(fonts/Lato.ttf) format("truetype"), url(fonts/Lato.svg#svgFontName) format("svg");
+  /* Legacy iOS */
+  /* from Google fonts */
+}
+
+/* Pricing Table Style
+  from Daniel Zawadzki CodePen
+  with Modifications. */
+.plans-card-header,
+.plans-list-group-item {
+  background-color: transparent;
+}
+
+.plans-card {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 2.25rem 0;
+  position: relative;
+  will-change: transform;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.374);
+}
+
+.plans-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #ec5242;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.plans-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.plans-card:hover::after {
+  width: 100%;
+}
+
+.plans-card .card-header,
+.plans-card .plans-card-header {
+  padding-left: 2rem;
+  border-bottom: 0;
+}
+
+.plans-card .card-title {
+  margin-bottom: 1rem;
+}
+
+.plans-card .card-block {
+  padding-top: 0;
+}
+
+.plans-card .list-group-item {
+  border: 0;
+  padding: 0.25rem;
+  color: #808080;
+  font-weight: 300;
+}
+
+.display-2 {
+  font-size: 7rem;
+  letter-spacing: -0.5rem;
+}
+
+.display-2 .currency {
+  font-size: 2.75rem;
+  position: relative;
+  font-weight: 400;
+  top: -45px;
+  letter-spacing: 0;
+}
+
+.display-2 .period {
+  font-size: 1rem;
+  color: #b3b3b3;
+  letter-spacing: 0;
+}
+
+.plans-btn {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #a6a6a6;
+  border-radius: 0;
+  padding: 0.75rem 1.25rem;
+  letter-spacing: 1px;
+  background-color: #f8f8f8;
+}
+
+.btn-gradient {
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  color: white;
+  background-color: #ec5242;
+}
+
+.main {
+  font-family: lato, sans-serif;
+}
+
+.top-nav {
+  background-color: #3e3e3e;
+}
+
+.bot-nav .bot-nav-img {
+  max-height: 80px;
+}
+
+.position-rel {
+  position: relative;
+}
+
+.border-head::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  bottom: -17px;
+  border-bottom: 2px solid #ec5242;
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.font-coco {
+  font-family: cocogoose, sans-serif;
+}
+
+.prim-color {
+  color: #ec5242;
+}
+
+.prim-bg {
+  background-color: #ec5242;
+}
+
+.text-bg,
+.about-text-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9301bc6), to(#e22d18a8)), url(../imgs/bg-text.jpg) no-repeat;
+  background: linear-gradient(#e9301bc6, #e22d18a8), url(../imgs/bg-text.jpg) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: top;
+  background-size: cover;
+  font-size: 8vw;
+}
+
+.border-color {
+  border-color: lightgray;
+}
+
+/* Mobile Nav Menu * Made by Erik Terwan (MIT)
+* With my Modifications */
+.menuToggle {
+  display: block;
+  z-index: 1;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -2px;
+  left: 15px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.menuToggle span {
+  display: block;
+  width: 39px;
+  height: 6px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #232323;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0;
+          transform-origin: 4px 0;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.menuToggle .menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.menuToggle .menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.menuToggle .menu li a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.menuToggle .menu li :hover {
+  color: tomato;
+}
+
+/* Mobile Nav Menu End */
+.jumbotron {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../imgs/bg-main.png") center no-repeat;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../imgs/bg-main.png") center no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.plans-jumbotron {
+  background: #f7f7f7;
+}
+
+.our-prog,
+.our-tech,
+.about-our-tech {
+  /* flex contanier */
+  background-image: url("../imgs/metal-pattern.png");
+  background-repeat: repeat;
+  background-size: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.our-prog .cards .card,
+.our-tech .cards .card,
+.about-our-tech .cards .card {
+  background-color: rgba(255, 255, 255, 0.061);
+}
+
+.our-prog .cards .card .card-body,
+.our-tech .cards .card .card-body,
+.about-our-tech .cards .card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.our-prog .cards .card .card-body i,
+.our-tech .cards .card .card-body i,
+.about-our-tech .cards .card .card-body i {
+  font-size: 2rem;
+}
+
+.our-prog .cards .card .card-body .card-title,
+.our-tech .cards .card .card-body .card-title,
+.about-our-tech .cards .card .card-body .card-title {
+  text-align: left;
+}
+
+.our-prog .cards .card .card-body .card-text,
+.our-tech .cards .card .card-body .card-text,
+.about-our-tech .cards .card .card-body .card-text {
+  font-size: 80%;
+  text-align: left;
+}
+
+.our-prog .cards .card .card-body .card-text .head-line::after,
+.our-tech .cards .card .card-body .card-text .head-line::after,
+.about-our-tech .cards .card .card-body .card-text .head-line::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  bottom: -10px;
+  border-bottom: 2px solid lightgray;
+}
+
+.our-tech,
+.about-our-tech {
+  background-image: none;
+  background-color: #f8f8f8;
+}
+
+.partners {
+  background-color: #414246;
+}
+
+.about-our-tech,
+.footer {
+  background-color: #fff;
+}
+
+.overlay-img::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ec534293;
+}
+
+.overly-text {
+  font-size: 2em;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 576px) {
+  .text-bg {
+    font-size: 18vw;
+  }
+  .about-text-bg {
+    font-size: 15vw;
+  }
+  .our-prog .cards .card .card-body,
+  .our-tech .cards .card .card-body,
+  .about-our-tech .cards .card .card-body {
+    gap: 20px;
+  }
+  .our-prog .cards .card .card-body i,
+  .our-tech .cards .card .card-body i,
+  .about-our-tech .cards .card .card-body i {
+    font-size: 2rem;
+  }
+  .our-prog .cards .card .card-body .card-title,
+  .our-tech .cards .card .card-body .card-title,
+  .about-our-tech .cards .card .card-body .card-title {
+    font-size: 0.8em;
+  }
+  .our-prog .cards .card .card-body .card-text,
+  .our-tech .cards .card .card-body .card-text,
+  .about-our-tech .cards .card .card-body .card-text {
+    font-size: 0.6em;
+  }
+  .our-prog .cards .card .card-body .card-text .em-2,
+  .our-tech .cards .card .card-body .card-text .em-2,
+  .about-our-tech .cards .card .card-body .card-text .em-2 {
+    font-size: 2em;
+  }
+  .our-prog .cards .btn,
+  .our-tech .cards .btn,
+  .about-our-tech .cards .btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-prog .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+  }
+  .our-prog .cards .card {
+    height: 300px;
+    width: 250px;
+  }
+  .our-prog .cards .card .card-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    gap: 20px;
+  }
+  .our-prog .cards .card .card-body .card-title {
+    text-align: center;
+  }
+  .our-prog .cards .card .card-body .card-text {
+    text-align: center;
+  }
+  .our-tech .cards,
+  .about-our-tech .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .our-tech .cards .card,
+  .about-our-tech .cards .card {
+    width: 100%;
+  }
+  .about-our-tech .cards .card {
+    width: 50%;
+  }
+  .about-footer {
+    background-color: #3e3e3e;
+    color: white;
+  }
+}
+
+@media (min-width: 992px) {
+  .our-tech .cards .card,
+  .about-our-tech .cards .card {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
