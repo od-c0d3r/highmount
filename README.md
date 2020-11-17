@@ -21,7 +21,7 @@ Give a ⭐️ if you like this project!<br><br>
 ## 📡 Technologies used :
 
 - HTML & CSS
-- Bootstrap 4 ~ _For posititng pages elements_
+- Bootstrap 4 ~ _For positing pages elements_
 - Flexbox & Media queries ~ _Some elements visibilty control_
 - SASS ~ _Organizing CSS file_
 
