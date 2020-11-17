@@ -410,6 +410,13 @@
           transform: translate(-50%, -50%);
 }
 
+.table {
+  border: 10px solid transparent;
+  -o-border-image: url(../imgs/plans.png) 30 round;
+     border-image: url(../imgs/plans.png) 30 round;
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 576px) {
   .text-bg {
     font-size: 18vw;
@@ -446,6 +453,9 @@
   .our-tech .cards .btn,
   .about-our-tech .cards .btn {
     font-size: 1rem;
+  }
+  .table {
+    font-size: 99%;
   }
 }
 
