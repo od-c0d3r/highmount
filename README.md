@@ -55,8 +55,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Design idea by [Cindy Shin in Behance](https://www.behance.net/adagio07)
-- Daniel Zawadzki CodePen
-- Erik Terwan
+- Daniel Zawadzki CodePen ~ _Cards effect_
+- Erik Terwan CodePen ~ _Hamburger Menu_
+- Byabasaija ~ _Custom border_ ~ [@Byabasaija](https://github.com/Byabasaija) 
 
 ## 📝 License
 
